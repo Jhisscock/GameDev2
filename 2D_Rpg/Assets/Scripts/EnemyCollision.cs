@@ -5,11 +5,13 @@ using UnityEngine;
 public class EnemyCollision : MonoBehaviour
 {
     public LayerMask groundLayer;
+    public LayerMask playerLayer;
     public static bool onGround;
     public static bool onWall;
     public static bool onRightWall;
     public static bool onLeftWall;
     public static bool onTop;
+    public static bool onPlayer;
     public int wallSide;
     public float collisionRadius = 0.25f;
     public Vector2 bottomOffset, rightOffset, leftOffset, topOffset;
@@ -28,6 +30,7 @@ public class EnemyCollision : MonoBehaviour
         onRightWall =  Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, collisionRadius, groundLayer);
         onLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, collisionRadius, groundLayer);
         onTop = Physics2D.OverlapCircle((Vector2)transform.position + topOffset, collisionRadius, groundLayer);
+        onPlayer = Physics2D.OverlapCircle((Vector2)transform.position, collisionRadius, playerLayer);
     }
 
     void OnDrawGizmos()
@@ -40,5 +43,6 @@ public class EnemyCollision : MonoBehaviour
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + topOffset, collisionRadius);
+        Gizmos.DrawWireSphere((Vector2)transform.position, collisionRadius);
     }
 }
