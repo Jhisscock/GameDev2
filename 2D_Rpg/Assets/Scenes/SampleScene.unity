@@ -387,15 +387,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 222078001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d1a15f6e70eac43aafa1a573d4226e, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ce6710ea1ae7c419faa0c129a3f273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 297727198}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  collisionRadius: 10
-  attack: {fileID: 0}
+  collisionRadius: 9
+  attack: {fileID: 1135979394057012659, guid: 9f733282de84c4046a2f1802a2f246d3, type: 3}
   key: {fileID: 0}
 --- !u!4 &297727198 stripped
 Transform:
@@ -7229,7 +7229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44, y: 14}
+  m_AnchoredPosition: {x: -30, y: 7}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781709642
@@ -9834,12 +9834,12 @@ PrefabInstance:
     - target: {fileID: 8268272623373651649, guid: 593f39d329a93ab4e81a264e10b76d13,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -44
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 8268272623373651649, guid: 593f39d329a93ab4e81a264e10b76d13,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 14
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8268272623373651649, guid: 593f39d329a93ab4e81a264e10b76d13,
         type: 3}
@@ -9920,11 +9920,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5034533260316220360, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
-        type: 3}
-      propertyPath: m_Name
-      value: priest1_v2_1
-      objectReference: {fileID: 0}
     - target: {fileID: 5034533260316220365, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9979,6 +9974,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5034533260316220360, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
+        type: 3}
+      propertyPath: m_Name
+      value: priest1_v2_1
       objectReference: {fileID: 0}
     - target: {fileID: 5034533260316220402, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
         type: 3}

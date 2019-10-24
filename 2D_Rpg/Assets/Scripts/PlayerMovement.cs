@@ -123,6 +123,13 @@ public class PlayerMovement : MonoBehaviour
             Camera.main.orthographicSize = 7f;
             ambience.Pause();
             song.Play(0);
+            other.gameObject.SetActive(false);
+        }
+    }
+
+    void onGui(){
+        if(paused){
+
         }
     }
 }
