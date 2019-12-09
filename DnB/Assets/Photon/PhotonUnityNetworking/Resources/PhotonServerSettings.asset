@@ -34,5 +34,9 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - OnMouseDown
+  - ColorWhite
+  - AddTurn
+  - NameChange
   DisableAutoOpenWizard: 1
   ShowSettings: 0
