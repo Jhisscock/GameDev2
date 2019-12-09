@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class LineDisplay : MonoBehaviour
+
+public class LineDisplay : NetworkBehaviour
 {
+    [SyncVar]
     private Color startColor;
+    [SyncVar]
     private bool clicked = false;
+    [SyncVar]
+    private GameObject tmp;
     // Start is called before the first frame update
+    [Command]
     void Start()
     {
-        startColor = GetComponent<SpriteRenderer>().color;
-        GetComponent<SpriteRenderer>().color = Color.clear;
+        tmp = this.gameObject;
+        startColor = tmp.GetComponent<SpriteRenderer>().color;
+        tmp.GetComponent<SpriteRenderer>().color = Color.clear;
     }
 
     // Update is called once per frame
@@ -19,20 +27,23 @@ public class LineDisplay : MonoBehaviour
         
     }
 
+    [Command]
     void OnMouseExit(){
         if(!clicked){
-            GetComponent<SpriteRenderer>().color = Color.clear;
+            tmp.GetComponent<SpriteRenderer>().color = Color.clear;
         }else{
-            GetComponent<SpriteRenderer>().color = startColor;
+            tmp.GetComponent<SpriteRenderer>().color = startColor;
         }
     }
 
+    [Command]
     void OnMouseOver(){
-        GetComponent<SpriteRenderer>().color = startColor;
+        tmp.GetComponent<SpriteRenderer>().color = startColor;
     }
 
+    [Command]
     void OnMouseDown(){
-        GetComponent<BoxCollider2D>().enabled = false;
+        tmp.GetComponent<BoxCollider2D>().enabled = false;
         clicked = true;
         BoardManager.Instance.AddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
     }

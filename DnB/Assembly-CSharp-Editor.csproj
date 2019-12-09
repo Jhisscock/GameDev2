@@ -54,6 +54,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-hlapi.Editor">
+ <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
@@ -69,6 +72,9 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.multiplayer-weaver.Editor">
+ <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
@@ -77,12 +83,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-hlapi.Editor">
- <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.multiplayer-weaver.Editor">
- <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.multiplayer-hlapi.Runtime">
  <HintPath>H:/GitHub/GameDev2/DnB/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
