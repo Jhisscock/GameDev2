@@ -16,9 +16,8 @@ public class LineDisplay : NetworkBehaviour
     [Command]
     void Start()
     {
-        tmp = this.gameObject;
-        startColor = tmp.GetComponent<SpriteRenderer>().color;
-        tmp.GetComponent<SpriteRenderer>().color = Color.clear;
+        startColor = GetComponent<SpriteRenderer>().color;
+        GetComponent<SpriteRenderer>().color = Color.clear;
     }
 
     // Update is called once per frame
@@ -27,24 +26,20 @@ public class LineDisplay : NetworkBehaviour
         
     }
 
-    [Command]
     void OnMouseExit(){
         if(!clicked){
-            tmp.GetComponent<SpriteRenderer>().color = Color.clear;
+            GetComponent<SpriteRenderer>().color = Color.clear;
         }else{
-            tmp.GetComponent<SpriteRenderer>().color = startColor;
+            GetComponent<SpriteRenderer>().color = startColor;
         }
     }
 
-    [Command]
     void OnMouseOver(){
-        tmp.GetComponent<SpriteRenderer>().color = startColor;
+        GetComponent<SpriteRenderer>().color = startColor;
     }
 
-    [Command]
     void OnMouseDown(){
-        tmp.GetComponent<BoxCollider2D>().enabled = false;
-        clicked = true;
-        BoardManager.Instance.AddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
+        Destroy(this.gameObject);
+        BoardManager.Instance.CmdAddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
     }
 }

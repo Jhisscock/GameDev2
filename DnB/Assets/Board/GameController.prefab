@@ -50,6 +50,7 @@ MonoBehaviour:
     type: 3}
   p2Square: {fileID: 5365185333862358234, guid: f4e7ea4ac04bc0743bbf05098c31c6cd,
     type: 3}
+  line2: {fileID: 0}
 --- !u!114 &-2572434120907491190
 MonoBehaviour:
   m_ObjectHideFlags: 0

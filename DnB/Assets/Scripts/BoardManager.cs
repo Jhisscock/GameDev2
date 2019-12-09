@@ -15,11 +15,13 @@ public class BoardManager : NetworkBehaviour
     [SyncVar]
     public GameObject p2Square;
     public static BoardManager Instance;
+    [SyncVar]
+    public GameObject line2;
     
     void Awake(){
         Instance = this;
     }
-    [Command]
+    [Server]
     void Start()
     {
         if(isServer){
@@ -35,7 +37,7 @@ public class BoardManager : NetworkBehaviour
         }
         for(int i = 0; i < (board.GetLength(0) - 6) * (board.GetLength(1) - 7); i++){
             var tmp = Instantiate(line, new Vector2((float)horizCount * 2, (float)vertCount * 2 + 1), Quaternion.Euler(0f, 0f, 90f));
-            NetworkServer.Spawn(tmp);
+            NetworkServer.SpawnWithClientAuthority(tmp, connectionToClient);
             if(horizCount >= board.GetLength(0) - 7){
                 horizCount = 0;
                 vertCount++;
@@ -47,7 +49,7 @@ public class BoardManager : NetworkBehaviour
         horizCount = 0;
         for(int i = 0; i < (board.GetLength(0) - 7) * (board.GetLength(0) - 7); i++){
             var tmp = Instantiate(line, new Vector2((float)horizCount * 2 + 1, (float)vertCount*2), Quaternion.identity);
-            NetworkServer.Spawn(tmp);
+            NetworkServer.SpawnWithClientAuthority(tmp, connectionToClient);
             if(horizCount >= board.GetLength(0) - 8){
                 horizCount = 0;
                 vertCount++;
@@ -59,7 +61,7 @@ public class BoardManager : NetworkBehaviour
         horizCount = 0;
         for(int i = 0; i < (board.GetLength(0) - 6) * (board.GetLength(0) - 7); i++){
             var tmp = Instantiate(dot, new Vector2((float)horizCount * 2 , (float)vertCount * 2 ), Quaternion.identity);
-            NetworkServer.Spawn(tmp);
+            NetworkServer.SpawnWithClientAuthority(tmp, connectionToClient);
             if(horizCount >= board.GetLength(0) - 7){
                 horizCount = 0;
                 vertCount++;
@@ -77,12 +79,21 @@ public class BoardManager : NetworkBehaviour
     }
 
     [Command]
-    public void AddLine(int x, int y){
-        board[x,y] = true;
-        CheckBox(x, y);
+    public void CmdAddLine(int x, int y){
+            Debug.Log("Server");
+            if(y % 2 == 0){
+                var tmp = Instantiate(line2, new Vector2(x-2, y-2), Quaternion.identity);
+                NetworkServer.Spawn(tmp);
+            }else{
+                var tmp = Instantiate(line2, new Vector2(x-2, y-2), Quaternion.Euler(0f, 0f, 90f));
+                NetworkServer.Spawn(tmp);
+            }
+            board[x,y] = true;
+            CmdCheckBox(x, y);
     }
+
     [Command]
-    void CheckBox(int x, int y){
+    void CmdCheckBox(int x, int y){
         if(y % 2 == 0){
             if(board[x - 1,y + 1] && board[x + 1, y + 1] && board[x,y + 2]){
                 var tmp = Instantiate(p1Sqaure, new Vector2((float)x - 2, (float)y - 1), Quaternion.identity);

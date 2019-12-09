@@ -6,8 +6,6 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    com.unity.multiplayer-hlapi.Editor.dll:
-    - UnityEditor.NetworkIdentityEditor
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
@@ -468,7 +466,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 91b3c4d9a79633b3a4e3153198837baf
+      Hash: 7c74cac28dc110fc137a6ecd8fd72606
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoardManager
