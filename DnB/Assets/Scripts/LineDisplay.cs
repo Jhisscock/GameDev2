@@ -34,5 +34,6 @@ public class LineDisplay : MonoBehaviour
     void OnMouseDown(){
         GetComponent<BoxCollider2D>().enabled = false;
         clicked = true;
+        BoardManager.Instance.AddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
     }
 }
