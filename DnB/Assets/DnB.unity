@@ -120,11 +120,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &140286137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9133996738435514569, guid: 0402a222d337ce347b0ad48d786bec10,
     type: 3}
   m_PrefabInstance: {fileID: 9133996738548473115}
+=======
+--- !u!1 &1038634242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1038634245}
+  - component: {fileID: 1038634244}
+  - component: {fileID: 1038634243}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1038634243
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+>>>>>>> parent of 2411bfe... save
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1337406733
 PrefabInstance:
@@ -213,8 +239,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735d294f6c380814a989d98babea5959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1001 &401566149869009038
 PrefabInstance:
+=======
+  dot: {fileID: 1058176136350459449, guid: ab3a32b6ba200f843833186221a82790, type: 3}
+  line: {fileID: 3292638456474049519, guid: 68b0a5be2f80d994fbee9a8feff6223f, type: 3}
+--- !u!4 &2059705812
+Transform:
+>>>>>>> parent of 2411bfe... save
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:

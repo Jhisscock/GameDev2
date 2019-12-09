@@ -39,7 +39,12 @@ public class LineDisplay : NetworkBehaviour
     }
 
     void OnMouseDown(){
+<<<<<<< HEAD
         Destroy(this.gameObject);
         BoardManager.Instance.CmdAddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
+=======
+        GetComponent<BoxCollider2D>().enabled = false;
+        clicked = true;
+>>>>>>> parent of 2411bfe... save
     }
 }
