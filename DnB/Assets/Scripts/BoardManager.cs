@@ -6,14 +6,19 @@ using UnityEngine.Networking;
 public class BoardManager : NetworkBehaviour
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     [SyncVar]
     private static bool [,] board; 
+=======
+    private bool [,] board; 
+>>>>>>> parent of 2411bfe... save
 =======
     private bool [,] board; 
 >>>>>>> parent of 2411bfe... save
     public GameObject dot;
     [SyncVar]
     public GameObject line;
+<<<<<<< HEAD
 <<<<<<< HEAD
     [SyncVar]
     public GameObject p1Sqaure;
@@ -55,6 +60,17 @@ public class BoardManager : NetworkBehaviour
             Instantiate(line, new Vector2((float)horizCount * 2 - 1f, (float)vertCount * 2 - 1f), Quaternion.Euler(0f, 0f, 90f));
             if(horizCount >= board.GetLength(0)){
 >>>>>>> parent of 2411bfe... save
+=======
+    // Start is called befor.e the first frame update
+    void Start()
+    {
+        board = new bool[3, 2];
+        int vertCount = 0;
+        int horizCount = 0;
+        for(int i = 0; i < (board.GetLength(0) + 1) * board.GetLength(1); i++){
+            Instantiate(line, new Vector2((float)horizCount * 2 - 1f, (float)vertCount * 2 - 1f), Quaternion.Euler(0f, 0f, 90f));
+            if(horizCount >= board.GetLength(0)){
+>>>>>>> parent of 2411bfe... save
                 horizCount = 0;
                 vertCount++;
             }else{
@@ -64,10 +80,16 @@ public class BoardManager : NetworkBehaviour
         vertCount = 0;
         horizCount = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         for(int i = 0; i < (board.GetLength(0) - 7) * (board.GetLength(0) - 7); i++){
             var tmp = Instantiate(line, new Vector2((float)horizCount * 2 + 1, (float)vertCount*2), Quaternion.identity);
             NetworkServer.SpawnWithClientAuthority(tmp, connectionToClient);
             if(horizCount >= board.GetLength(0) - 8){
+=======
+        for(int i = 0; i < board.GetLength(0) * board.GetLength(0); i++){
+            Instantiate(line, new Vector2((float)horizCount * 2, (float)vertCount*2 - 2), Quaternion.identity);
+            if(horizCount >= board.GetLength(0) - 1){
+>>>>>>> parent of 2411bfe... save
 =======
         for(int i = 0; i < board.GetLength(0) * board.GetLength(0); i++){
             Instantiate(line, new Vector2((float)horizCount * 2, (float)vertCount*2 - 2), Quaternion.identity);
@@ -82,10 +104,16 @@ public class BoardManager : NetworkBehaviour
         vertCount = 0;
         horizCount = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
         for(int i = 0; i < (board.GetLength(0) - 6) * (board.GetLength(0) - 7); i++){
             var tmp = Instantiate(dot, new Vector2((float)horizCount * 2 , (float)vertCount * 2 ), Quaternion.identity);
             NetworkServer.SpawnWithClientAuthority(tmp, connectionToClient);
             if(horizCount >= board.GetLength(0) - 7){
+=======
+        for(int i = 0; i < (board.GetLength(0) + 1) * board.GetLength(0); i++){
+            Instantiate(dot, new Vector2((float)horizCount * 2 - 1f, (float)vertCount * 2 - 2f), Quaternion.identity);
+            if(horizCount >= board.GetLength(0)){
+>>>>>>> parent of 2411bfe... save
 =======
         for(int i = 0; i < (board.GetLength(0) + 1) * board.GetLength(0); i++){
             Instantiate(dot, new Vector2((float)horizCount * 2 - 1f, (float)vertCount * 2 - 2f), Quaternion.identity);
@@ -106,6 +134,7 @@ public class BoardManager : NetworkBehaviour
         
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     [Command]
     public void CmdAddLine(int x, int y){
@@ -140,6 +169,10 @@ public class BoardManager : NetworkBehaviour
                 NetworkServer.Spawn(tmp);
             }
         }
+=======
+     void AddLine(){
+
+>>>>>>> parent of 2411bfe... save
 =======
      void AddLine(){
 

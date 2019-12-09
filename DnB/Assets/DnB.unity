@@ -121,12 +121,15 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &140286137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9133996738435514569, guid: 0402a222d337ce347b0ad48d786bec10,
     type: 3}
   m_PrefabInstance: {fileID: 9133996738548473115}
 =======
+=======
+>>>>>>> parent of 2411bfe... save
 --- !u!1 &1038634242
 GameObject:
   m_ObjectHideFlags: 0

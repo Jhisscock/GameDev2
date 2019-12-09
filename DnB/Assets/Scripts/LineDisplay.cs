@@ -45,6 +45,9 @@ public class LineDisplay : NetworkBehaviour
 =======
         GetComponent<BoxCollider2D>().enabled = false;
         clicked = true;
+<<<<<<< HEAD
+>>>>>>> parent of 2411bfe... save
+=======
 >>>>>>> parent of 2411bfe... save
     }
 }
