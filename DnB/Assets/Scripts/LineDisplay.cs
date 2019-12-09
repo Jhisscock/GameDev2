@@ -1,19 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
 
-public class LineDisplay : NetworkBehaviour
+public class LineDisplay : MonoBehaviour
 {
-    [SyncVar]
     private Color startColor;
-    [SyncVar]
     private bool clicked = false;
-    [SyncVar]
     private GameObject tmp;
     // Start is called before the first frame update
-    [Command]
     void Start()
     {
         startColor = GetComponent<SpriteRenderer>().color;
@@ -39,15 +34,8 @@ public class LineDisplay : NetworkBehaviour
     }
 
     void OnMouseDown(){
-<<<<<<< HEAD
-        Destroy(this.gameObject);
-        BoardManager.Instance.CmdAddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
-=======
         GetComponent<BoxCollider2D>().enabled = false;
+        BoardManager.Instance.AddLine((int)gameObject.transform.position.x + 2, (int)gameObject.transform.position.y + 2);
         clicked = true;
-<<<<<<< HEAD
->>>>>>> parent of 2411bfe... save
-=======
->>>>>>> parent of 2411bfe... save
     }
 }
