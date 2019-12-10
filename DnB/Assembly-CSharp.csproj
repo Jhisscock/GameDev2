@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\BoardManager.cs" />
      <Compile Include="Assets\Scripts\GameSetupController.cs" />
      <Compile Include="Assets\Scripts\LineDisplay.cs" />
+     <Compile Include="Assets\Scripts\PunTurnManager.cs" />
      <Compile Include="Assets\Scripts\QuickStartLobbyController.cs" />
      <Compile Include="Assets\Scripts\RoomController.cs" />
      <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
