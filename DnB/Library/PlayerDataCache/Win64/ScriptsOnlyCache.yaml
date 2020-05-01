@@ -113,21 +113,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11196}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11210}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11328}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11778}
+      Script: {instanceID: 11780}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11788}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,11 +184,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11380}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -1059,7 +1059,7 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: e1e615eaf73e560828f53edc8952e615
-    assemblyName: PhotonUnityNetworking.Utilities.dll
+    assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PunTurnManager
   - hash:
@@ -1280,7 +1280,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomMasterClientIdProperty
   - hash:
       serializedVersion: 2
-      Hash: 7c74cac28dc110fc137a6ecd8fd72606
+      Hash: 7a1ade8cec4ace7eebe40feff9093144
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoardManager
@@ -1506,6 +1506,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NameChanger
   platform: 19
   scenePathNames:
   - Assets/Scenes/Game.unity

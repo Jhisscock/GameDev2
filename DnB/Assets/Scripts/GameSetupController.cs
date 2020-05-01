@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Photon.Pun;
-public class GameSetupController : MonoBehaviour
+public class GameSetupController : MonoBehaviourPunCallbacks
 {
     public GameObject player;
     private int count;
@@ -14,7 +14,6 @@ public class GameSetupController : MonoBehaviour
     }
 
     private void CreatePlayer(){
-        Debug.Log("Creating Player");
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonPlayer1"), Vector3.zero, Quaternion.identity);
     }
 

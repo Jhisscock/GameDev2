@@ -39,6 +39,10 @@ namespace Photon.Realtime
     /// </remarks>
     public class Player
     {
+        public static Player Instance;
+        void Awake(){
+            Instance = this;
+        }
         /// <summary>
         /// Used internally to identify the masterclient of a room.
         /// </summary>

@@ -396,7 +396,7 @@ MonoBehaviour:
     m_Bits: 512
   collisionRadius: 9
   attack: {fileID: 1135979394057012659, guid: 9f733282de84c4046a2f1802a2f246d3, type: 3}
-  key: {fileID: 0}
+  key: {fileID: 2599492019145309739, guid: e6cfdfae5be0c8145bc94f65a9919348, type: 3}
 --- !u!4 &297727198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5034533260316220365, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
@@ -9920,6 +9920,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5034533260316220360, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
+        type: 3}
+      propertyPath: m_Name
+      value: priest1_v2_1
+      objectReference: {fileID: 0}
     - target: {fileID: 5034533260316220365, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9974,11 +9979,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034533260316220360, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
-        type: 3}
-      propertyPath: m_Name
-      value: priest1_v2_1
       objectReference: {fileID: 0}
     - target: {fileID: 5034533260316220402, guid: 3a5eecbfe95256b4f8fb57d339be80c1,
         type: 3}

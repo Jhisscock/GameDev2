@@ -11,6 +11,7 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
     private GameObject quickCancelButton; //button used to stop searing for a game to join.
     [SerializeField]
     private int RoomSize; //Manual set the number of player in the room at one time.
+    private string playerName = "player1";
     public override void OnConnectedToMaster() //Callback function for when the first connection is established successfully.
     {
         PhotonNetwork.AutomaticallySyncScene = true; //Makes it so whatever scene the master client has loaded is the scene all other clients will load
@@ -32,7 +33,7 @@ public class QuickStartLobbyController : MonoBehaviourPunCallbacks
     {
         Debug.Log("Creating room now");
         int randomRoomNumber = Random.Range(0, 10000); //creating a random name for the room
-        RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = (byte)RoomSize };
+        RoomOptions roomOps = new RoomOptions() { IsVisible = true, IsOpen = true, MaxPlayers = (byte)RoomSize, PublishUserId = true };
         PhotonNetwork.CreateRoom("Room" + randomRoomNumber, roomOps); //attempting to create a new room
         Debug.Log(randomRoomNumber);
     }

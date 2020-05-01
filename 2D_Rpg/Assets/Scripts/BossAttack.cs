@@ -16,7 +16,7 @@ public class BossAttack : MonoBehaviour
     private float timer = 0f;
     private float moveTime = 0.5f;
     private bool follow = false;
-    private int health = 5;
+    private int health = 15;
     public GameObject attack;
     private float attackSpeed = 5.5f;
     private float attackTimer = 3f;

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
+using Photon.Pun.UtilityScripts;
 
-public class BoardManager : MonoBehaviour
+public class BoardManager : MonoBehaviourPunCallbacks
 {
     private static bool [,] board;
     public GameObject dot;
@@ -13,15 +15,17 @@ public class BoardManager : MonoBehaviour
     public GameObject p1Sqaure;
     public GameObject p2Square;
     public static BoardManager Instance;
-    public GameObject line2;
     private int turnCounter = 0;
     private int p1Score;
     private int p2Score;
+    public GameObject player;
+    private PhotonView photonView;
+    private Room room;
     
     void Awake(){
         Instance = this;
+        photonView = player.GetComponent<PhotonView>();
     }
-    // Start is called befor.e the first frame update
     void Start()
     {
         board = new bool[10, 9];
@@ -80,39 +84,19 @@ public class BoardManager : MonoBehaviour
     void CheckBox(int x, int y){
         if(y % 2 == 0){
             if(board[x - 1,y + 1] && board[x + 1, y + 1] && board[x,y + 2]){
-                if(PhotonNetwork.IsMasterClient){
-                    PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 2, (float)y - 1), Quaternion.identity);
-                    p1Score++;
-                }else{
-                    PhotonNetwork.InstantiateSceneObject("Player2", new Vector2((float)x - 2, (float)y - 1), Quaternion.identity);
-                    p2Score++;
-                }
+                PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 2, (float)y - 1), Quaternion.identity);
+                p1Score++;
             }else if(board[x + 1,y - 1] && board[x - 1, y - 1] && board[x,y - 2]){
-                if(PhotonNetwork.IsMasterClient){
-                    PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 2, (float)y - 3), Quaternion.identity);
-                    p1Score++;
-                }else{
-                    PhotonNetwork.InstantiateSceneObject("Player2", new Vector2((float)x - 2, (float)y - 3), Quaternion.identity);
-                    p2Score++;
-                }
+                PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 2, (float)y - 3), Quaternion.identity);
+                p1Score++;
             }
         }else{
             if(board[x + 1 ,y - 1] && board[x + 1, y + 1] && board[x + 2,y]){
-                if(PhotonNetwork.IsMasterClient){
-                    PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 1, (float)y - 2), Quaternion.identity);
-                    p1Score++;
-                }else{
-                    PhotonNetwork.InstantiateSceneObject("Player2", new Vector2((float)x - 1, (float)y - 2), Quaternion.identity);
-                    p2Score++;
-                }
+                PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 1, (float)y - 2), Quaternion.identity);
+                p1Score++;
             }else if(board[x - 1,y + 1] && board[x - 1, y - 1] && board[x - 2,y]){
-                if(PhotonNetwork.IsMasterClient){
-                    PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 3, (float)y - 2), Quaternion.identity);
-                    p1Score++;
-                }else{
-                    PhotonNetwork.InstantiateSceneObject("Player2", new Vector2((float)x - 3, (float)y - 2), Quaternion.identity);
-                    p2Score++;
-                }
+                PhotonNetwork.InstantiateSceneObject("Player1", new Vector2((float)x - 3, (float)y - 2), Quaternion.identity);
+                p1Score++;
             }
         }
     }

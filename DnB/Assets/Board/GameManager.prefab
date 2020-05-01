@@ -49,7 +49,7 @@ MonoBehaviour:
   p1Sqaure: {fileID: 8583639220656302827, guid: d66d173a7c876984e95f573a752db016,
     type: 3}
   p2Square: {fileID: 600022792765202942, guid: f4e7ea4ac04bc0743bbf05098c31c6cd, type: 3}
-  line2: {fileID: 0}
+  player: {fileID: 6799219096266317938, guid: a93b112c0310fd746b6ae8fa913ceea9, type: 3}
 --- !u!114 &9177877569941008652
 MonoBehaviour:
   m_ObjectHideFlags: 0
